@@ -8,7 +8,7 @@ jobs:
       - run:
           name: Run KICS
           command: |
-            /app/bin/kics scan -p ${PWD} -o results --ci --report-formats json,junit
+            /app/bin/kics scan -p ${PWD} -o results -v --report-formats json,junit
       - store_artifacts:
           path: results
 
