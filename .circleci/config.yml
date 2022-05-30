@@ -8,9 +8,9 @@ jobs:
       - run:
           name: Run KICS
           command: |
-            /app/bin/kics scan -p ${PWD} -o ${PWD} --ci
+            /app/bin/kics scan -p ${PWD} -o ${PWD} --ci --report-formats json,junit
       - store_artifacts:
-          path: results.json
+          path: results
 
 workflows:
   version: 2
